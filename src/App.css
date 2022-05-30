@@ -257,3 +257,11 @@ h6 {
   width: 100%;
   height: auto;
 }
+
+.main {
+  display: flex;
+  height: 85vh;
+  width: 100vw;
+  background-color: antiquewhite;
+
+}
