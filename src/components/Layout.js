@@ -20,6 +20,12 @@ function Layout() {
             })
     }, [])
 
+    if (!products.length > 0) {
+        return (
+            <div><h1>loading...</h1></div>
+        )
+    }
+
 
     return (
         <div>
@@ -28,7 +34,7 @@ function Layout() {
 
                 <Routes>
                     <Route path="/" element={<Navigate to="/categories" />} />
-                    <Route path="/categories" element={products.length > 0 ? <Categories products={products} /> : <div>loading...</div>} />
+                    <Route path="/categories" element={<Categories products={products} />} />
                     <Route path="/items" element={<Items />} />
                     <Route path="/open-item" element={<OpenItem />} />
                     <Route path="*" element={<h1>wrong way</h1>} />
