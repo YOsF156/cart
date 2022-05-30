@@ -8,19 +8,15 @@ import OpenItem from './OpenItem'
 
 function Layout() {
     const [products, setProducts] = useState([])
-    console.log("🚀 ~ file: Layout.js ~ line 11 ~ Layout ~ products", products)
     const [filteredProducts, setFilteredProducts] = useState([])
     const [cartProducts, setCartProducts] = useState([])
-
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
-                console.log("🚀 ~ file: Layout.js ~ line 20 ~ useEffect ~ data", data)
-                // setFilteredProducts(data)
-                alert("vfdsvjlfv")
+                setFilteredProducts(data)
             })
     }, [])
 

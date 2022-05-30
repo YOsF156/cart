@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom"
+
 export default function Category(props) {
-    const { product } = props
-    console.log(product)
+    const { category } = props
     return (
         <div className="product-card container">
-            <img src={product.image} alt="" />
-            <div>{product.title}</div>
+            <Link to={`/items`}> <h1>{category}</h1></Link>
         </div>
     )
 }
